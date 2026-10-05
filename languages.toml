@@ -1,0 +1,37 @@
+[[language]]
+name = "markdown"
+scope = "source.gfm"
+file-types = ["md"]
+soft-wrap.enable = true
+indent = { tab-width = 4, unit = "\t"}
+
+[[language]]
+name = "text"
+scope = "text.plain"
+file-types = ["txt"]
+soft-wrap.enable = true
+
+[[language]]
+name = "python"
+scope = "source.py"
+indent = { tab-width = 4, unit = "\t"}
+formatter = { command = "ruff", args = ["format", "--line-length", "88", "-"] }
+auto-format = true
+
+[[language]]
+name = "go"
+auto-format = true
+
+[[language]]
+name = "html"
+language-servers = ["vscode-html-language-server"]
+formatter = { command = "prettier", args = ["--parser", "html"] }
+auto-format = true
+
+[language.auto-pairs]
+'(' = ')'
+'{' = '}'
+'[' = ']'
+'"' = '"'
+"'" = "'"
+"<" = ">"
